@@ -258,7 +258,7 @@ button { -webkit-tap-highlight-color: transparent; }
     font-size: 13px;
     resize: vertical;
     outline: none;
-    box-sizing: border-border-box;
+    box-sizing: border-box;
     transition: 0.3s ease;
 }
 
@@ -277,4 +277,17 @@ button { -webkit-tap-highlight-color: transparent; }
     .options-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ---------- اصلاحات ---------- */
+body { min-height: 100vh; min-height: 100dvh; }
+.app { position: relative; z-index: 1; }
+.card { -webkit-backdrop-filter: blur(15px); }
+.terminal { direction: ltr; text-align: left; }
+.btn:disabled:hover { transform: none; }
+.calendar-nav:disabled { opacity: .3; cursor: not-allowed; }
+.calendar-day:disabled:hover { background: #1c1822; transform: none; }
+
+@media (max-width: 600px) {
+    .question-area { flex-direction: column; }
 }
