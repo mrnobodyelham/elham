@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0910">
+    <title>دعوت‌نامه محرمانه... 🔐</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/jalaali-js@1.2.6/dist/jalaali.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow glow1"></div>
+    <div class="background-glow glow2"></div>
+
+    <main class="app">
+       <!-- 1. Terminal -->
+        <section id="terminalScreen" class="screen active">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-title">secret_invitation.exe</div>
+                </div>
+                <div class="terminal-body">
+                    <p>> Initializing encrypted_connection...</p>
+                    <p>> Analyzing heart_frequency...</p>
+                    <p>> Match ratio: <span>100% (PERFECT)</span></p>
+                    <p>> Protocol: "Secret Meeting"</p>
+                    <p>> Status: <span>WAITING FOR YOUR CONFIRMATION</span></p>
+                    <div class="loading-bar"><div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 صفحه جدید: تبریک روز دختر -->
+        <section id="greetingScreen" class="screen">
+            <div class="card">
+                <div class="emoji">🌸</div>
+                <h2>الهامِ عزیز، روزت مبارک... ✨</h2>
+                <p class="description">
+                    شاید بهانه‌های زیادی برای نوشتن این کد نبود، اما امروز بهانه‌ی قشنگی شد تا یادت بیارم حضور آدم‌های خاص چقدر دنیارو قشنگ‌تر می‌کنه... روزت مبارک 🌸❤️
+                </p>
+                <button id="continueToQuestionBtn" class="btn primary-btn">ادامه دادن به پیام رمزنگاری‌شده →</button>
+            </div>
+        </section>
+
+        <!-- 2. Question -->
+        <section id="questionScreen" class="screen">
+            <div class="card">
+                <div class="emoji">🗝️</div>
+                
+                <p class="small-text" style="font-size: 16px;">
+                    یک پیام رمزنگاری‌شده، فقط برای <strong style="font-size: 19px; color: #ff86ad;">چشم‌های تو، الهام جانم</strong>... 🗝️
+                </p>
+
+                <h1>حیف نیست قشنگیِ اون چشمات پشت فاصله بمونه؟ موافقی برنامه‌ی یه دیت رو بچینیم و دوباره تصویر خودمو تو چشمات ببینم؟ ✨❤️</h1>
+
+                <p class="description">یه وقتایی لازمه به حس خوبت اعتماد کنی و اجازه بدی همه چیز از همین کلیک شروع بشه...</p>
+
+                <div id="questionArea" class="question-area">
+                    <button id="yesButton" class="btn yes-btn">آره، با کمال میل! ❤️</button>
+                    <button id="noButton" class="btn no-btn">نه 😐</button>
+                </div>
+
+                <p id="warningText" class="warning-text"></p>
+            </div>
+        </section>
+
+        <!-- 3. Date -->
+        <!-- 3. Date Screen -->
+<section id="dateScreen" class="screen">
+    <div class="card wide-card">
+        <div class="step-title"><span>01</span> زمان‌بندی دیدار</div>
+        <h2>تقویم آماده‌ست؛ کدوم روز قراره دوباره تصویرمو توی چشمات ببینی؟ 📅</h2>
+        <p class="description">یه روز رو علامت بزن تا داستانِ این دیدار از همون‌جا شروع بشه...</p>
+
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prevMonth" class="calendar-nav" aria-label="ماه قبل">‹</button>
+                <div id="monthTitle"></div>
+                <button id="nextMonth" class="calendar-nav" aria-label="ماه بعد">›</button>
+            </div>
+
+            <div class="weekdays">
+                <div>ش</div><div>ی</div><div>د</div><div>س</div><div>چ</div><div>پ</div><div>ج</div>
+            </div>
+            <div id="calendarDays" class="calendar-days"></div>
+        </div>
+
+        <div id="selectedDateText" class="selected-info">هنوز تاریخی انتخاب نشده</div>
+        <button id="continueToTime" class="btn primary-btn disabled" disabled>ثبت تاریخ و ادامه →</button>
+    </div>
+</section>
+
+        <!-- 4. Time -->
+        <!-- 4. Time Screen -->
+<section id="timeScreen" class="screen">
+    <div class="card">
+        <div class="step-title"><span>02</span> انتخاب زمان</div>
+        <h2>ساعتت رو با من کوک کن... کدوم زمان برات عالیه؟ ⏰</h2>
+        <p class="description">زمانی رو انتخاب کن که فارغ از تمام شلوغی‌های دنیا، تمام حواست پیشِ من باشه...</p>
+
+        <div class="time-slots">
+            <button class="time-slot" data-time="17:00">۱۷:۰۰</button>
+            <button class="time-slot" data-time="18:00">۱۸:۰۰</button>
+            <button class="time-slot" data-time="19:00">۱۹:۰۰</button>
+            <button class="time-slot" data-time="20:00">۲۰:۰۰</button>
+        </div>
+
+        <button id="continueToActivity" class="btn primary-btn disabled" disabled>ثبت زمان و ادامه →</button>
+    </div>
+</section>
+
+       <!-- 5. Activity Screen -->
+<section id="activityScreen" class="screen">
+    <div class="card wide-card">
+        <div class="step-title"><span>03</span> انتخاب برنامه</div>
+        <h2>نقشه‌ی این عصرِ پاییزی رو تو بکش... بگو امشب کجا بگذره؟ ☕🍁</h2>
+        <p class="description">تو فقط اشاره کن، بقیه‌ی سناریوی این شبِ پاییزی با من...</p>
+
+        <div class="options-grid">
+            <div class="option-card" data-activity="کافه و رستوران">
+                <div class="option-icon">☕</div>
+                <h3>کافه و رستوران</h3>
+                <p>یه گوشه‌ی آروم، نوشیدنیِ گرم و یه گپِ طولانی که فارغ از تمام شلوغی‌های شهر بگذره...</p>
+            </div>
+
+            <div class="option-card" data-activity="توی ماشین">
+                <div class="option-icon">🚗</div>
+                <h3>توی ماشین</h3>
+                <p>فضای اختصاصیِ خودمون، موزیکِ لایت و زل زدن توی چشم‌های هم... نورهای شهر از پشت شیشه و تداعیِ دوباره‌ی همون حسِ گرم و آشنای قدیمی...</p>
+            </div>
+
+            <div class="option-card" data-activity="بیلیارد">
+                <div class="option-icon">🎱</div>
+                <h3>بیلیارد</h3>
+                <p>تمرکز پشتِ میز و یاد دادنِ دوباره‌ی فوت‌وفن‌های بازی... جایی که دوباره قراره وسطِ بازی غرقِ نگاهت بشم و کلاً بازی یادم بره!</p>
+            </div>
+
+            <div class="option-card" data-activity="شهربازی">
+                <div class="option-icon">🎡</div>
+                <h3>شهربازی</h3>
+                <p>فرار از دنیای جدیِ آدم‌بزرگ‌ها؛ خنده‌های بی‌پروا، هیجان و حسِ رهاییِ مطلق کنارِ من...</p>
+            </div>
+        </div>
+
+        <button id="continueToFinal" class="btn primary-btn disabled" disabled>ثبت برنامه و مرحله بعد →</button>
+    </div>
+</section>
+
+        <!-- 6. Final -->
+       <!-- 6. Final Screen -->
+<section id="finalScreen" class="screen">
+    <div class="card">
+        <div class="step-title"><span>04</span> ثبت نهایی قرار</div>
+        <h2>همه‌چیز برای یه عصرِ خاص ردیف شد... ✨🍁</h2>
+        <p class="description">خلاصه‌ی انتخابی که داشتی اینجاست:</p>
+
+        <!-- باکس خلاصه انتخاب‌ها -->
+        <div class="summary-box">
+            <div class="summary-item">
+                <span class="summary-label">📅 تاریخ دیدار:</span>
+                <span id="summaryDate" class="summary-value">انتخاب نشده</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">⏰ ساعت دیدار:</span>
+                <span id="summaryTime" class="summary-value">انتخاب نشده</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">🗝️ سناریوی برنامه:</span>
+                <span id="summaryActivity" class="summary-value">انتخاب نشده</span>
+            </div>
+        </div>
+
+        <!-- فیلد توضیحات اختیاری -->
+        <div class="custom-note-group">
+            <label for="extraNotes">نکته یا توضیحات اضافی (اختیاری):</label>
+            <textarea id="extraNotes" placeholder="اگر ترجیح یا نکته‌ی خاصی مد نظرت هست اینجا بنویس..."></textarea>
+        </div>
+
+        <p class="final-note">
+            پاییز امسال قرار نیست مثل سال‌های قبل بگذره... روی دکمه‌ی زیر بزن تا خلاصه‌ی انتخابت برام ارسال بشه. بقیه‌ی سناریو با من 🥂
+        </p>
+
+        <!-- یادآوری فیلترشکن -->
+        <p class="vpn-warning">🔒 مطمئن شو فیلترشکنت روشنه تا مستقیم وارد تلگرام بشه.</p>
+
+        <button id="sendToTelegram" class="btn primary-btn telegram-btn">
+            ثبت و ارسالِ انتخاب‌ها به تلگرام 📱
+        </button>
+    </div>
+</section>
